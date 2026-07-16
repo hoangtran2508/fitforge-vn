@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FitForge - thư viện bài tập và công cụ tự xây dựng buổi tập đơn giản, thân thiện.">
+  <meta name="theme-color" content="#f7fbf7">
+  <title>FitForge — Tập đúng, khỏe hơn mỗi ngày</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#exercise-library">Bỏ qua đến thư viện bài tập</a>
+
+  <header class="site-header" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="FitForge - về đầu trang">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><path d="M8 15v6m4-10v14m12-14v14m4-10v6M12 18h12"/></svg>
+        </span>
+        <span>Fit<span>Forge</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Điều hướng chính">
+        <a href="#exercise-library">Bài tập</a>
+        <a href="#how-it-works">Cách sử dụng</a>
+        <a href="#safety">Tập an toàn</a>
+      </nav>
+      <button class="builder-trigger" id="open-builder" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        Buổi tập của tôi
+        <span class="builder-count" id="builder-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow"><span></span> Tập luyện theo cách của bạn</span>
+        <h1 id="hero-title">Tập đúng.<br><em>Khỏe hơn</em> mỗi ngày.</h1>
+        <p>Khám phá bài tập theo từng nhóm cơ, xem hướng dẫn kỹ thuật và tự xây dựng một buổi tập vừa sức với bạn.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#exercise-library">Khám phá bài tập <span aria-hidden="true">→</span></a>
+          <button class="button secondary" id="hero-builder" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            Tạo buổi tập
+          </button>
+        </div>
+        <div class="trust-row" aria-label="Điểm nổi bật">
+          <div><strong>12+</strong><span>Bài tập cơ bản</span></div>
+          <div><strong>06</strong><span>Nhóm cơ</span></div>
+          <div><strong>100%</strong><span>Tùy chỉnh</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Minh họa dụng cụ tập luyện">
+        <span class="art-blob blob-one"></span>
+        <span class="art-blob blob-two"></span>
+        <div class="hero-card main-card">
+          <div class="art-scene">
+            <svg viewBox="0 0 520 400" role="img" aria-label="Thảm tập, tạ tay và bình nước">
+              <defs>
+                <linearGradient id="mat" x1="0" x2="1"><stop stop-color="#79d2b3"/><stop offset="1" stop-color="#a8e3ce"/></linearGradient>
+                <linearGradient id="bottle" x1="0" x2="1"><stop stop-color="#ff8c75"/><stop offset="1" stop-color="#ffb097"/></linearGradient>
+                <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#17352d" flood-opacity=".15"/></filter>
+              </defs>
+              <ellipse cx="258" cy="342" rx="197" ry="28" fill="#dcebe4"/>
+              <g filter="url(#shadow)">
+                <path d="M98 276l245-82 93 63-250 87z" fill="url(#mat)"/>
+                <path d="M98 276v20l87 65v-17z" fill="#58b597"/>
+                <path d="M185 344l251-87v18l-251 86z" fill="#6bc5a6"/>
+                <path d="M134 281l206-69" stroke="#dff7ee" stroke-width="3" stroke-dasharray="9 9"/>
+              </g>
+              <g transform="translate(92 165) rotate(-13)" filter="url(#shadow)">
+                <rect x="38" y="33" width="103" height="24" rx="12" fill="#233d55"/>
+                <rect x="22" y="14" width="26" height="61" rx="8" fill="#ff8c75"/>
+                <rect x="10" y="21" width="18" height="47" rx="6" fill="#ffab94"/>
+                <rect x="132" y="14" width="26" height="61" rx="8" fill="#ff8c75"/>
+                <rect x="152" y="21" width="18" height="47" rx="6" fill="#ffab94"/>
+              </g>
+              <g transform="translate(362 94)" filter="url(#shadow)">
+                <path d="M25 39h55l8 118c1 16-11 29-27 29H44c-16 0-28-13-27-29z" fill="url(#bottle)"/>
+                <rect x="35" y="14" width="35" height="31" rx="9" fill="#233d55"/>
+                <rect x="41" y="2" width="23" height="17" rx="5" fill="#314e67"/>
+                <path d="M31 92c17 8 35 8 52 0" fill="none" stroke="#ffe5dc" stroke-width="6" stroke-linecap="round"/>
+              </g>
+              <g transform="translate(264 85) rotate(12)" filter="url(#shadow)">
+                <path d="M0 22c22-27 62-24 79 5-18 27-56 31-79-5z" fill="#fff4b9"/>
+                <circle cx="22" cy="18" r="4" fill="#233d55"/><circle cx="59" cy="31" r="4" fill="#233d55"/>
+              </g>
+            </svg>
+          </div>
+          <div class="floating-note note-one"><span>✓</span><div><strong>Dễ bắt đầu</strong><small>Hướng dẫn từng bước</small></div></div>
+          <div class="floating-note note-two"><span>♥</span><div><strong>Tự thiết kế</strong><small>Buổi tập của riêng bạn</small></div></div>
+        </div>
+        <span class="spark spark-one">✦</span>
+        <span class="spark spark-two">✦</span>
+      </div>
+    </section>
+
+    <section class="quick-benefits" aria-label="Lợi ích">
+      <div class="shell benefit-grid">
+        <article><span class="benefit-icon mint"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></span><div><h2>Đúng kỹ thuật</h2><p>Các bước thực hiện rõ ràng, dễ theo dõi.</p></div></article>
+        <article><span class="benefit-icon coral"><svg viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg></span><div><h2>Tiến bộ vừa sức</h2><p>Tùy chỉnh hiệp, số lần và thời gian nghỉ.</p></div></article>
+        <article><span class="benefit-icon yellow"><svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="M8 12l3 3 5-6"/></svg></span><div><h2>Lưu ngay trên máy</h2><p>Buổi tập vẫn còn khi bạn quay lại.</p></div></article>
+      </div>
+    </section>
+
+    <section class="library-section shell" id="exercise-library" aria-labelledby="library-title">
+      <div class="section-heading">
+        <div><span class="eyebrow"><span></span> Thư viện bài tập</span><h2 id="library-title">Chọn bài tập phù hợp</h2><p>Tìm theo nhóm cơ, mức độ hoặc dụng cụ bạn đang có.</p></div>
+        <button class="button soft" id="add-custom" type="button"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg> Thêm bài riêng</button>
+      </div>
+
+      <div class="library-tools">
+        <label class="search-box" for="exercise-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="exercise-search" type="search" placeholder="Tìm kiếm bài tập..." autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </label>
+        <div class="filters" id="muscle-filters" aria-label="Lọc theo nhóm cơ"></div>
+      </div>
+
+      <div class="result-bar">
+        <p><strong id="result-count">0</strong> bài tập được tìm thấy</p>
+        <label for="sort-exercises">Sắp xếp:
+          <select id="sort-exercises"><option value="featured">Nổi bật</option><option value="easy">Dễ trước</option><option value="name">Tên A–Z</option></select>
+        </label>
+      </div>
+
+      <div class="exercise-grid" id="exercise-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span>⌕</span><h3>Chưa tìm thấy bài phù hợp</h3><p>Thử đổi từ khóa hoặc chọn nhóm cơ khác nhé.</p>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works" aria-labelledby="how-title">
+      <div class="shell">
+        <div class="center-heading"><span class="eyebrow"><span></span> Bắt đầu thật đơn giản</span><h2 id="how-title">Ba bước cho một buổi tập</h2></div>
+        <div class="steps-grid">
+          <article><span class="step-number">01</span><div class="step-art mint"><svg viewBox="0 0 80 80"><circle cx="34" cy="34" r="20"/><path d="m49 49 14 14M27 34h14M34 27v14"/></svg></div><h3>Chọn bài tập</h3><p>Tìm bài theo nhóm cơ và đọc kỹ hướng dẫn.</p></article>
+          <article><span class="step-number">02</span><div class="step-art coral"><svg viewBox="0 0 80 80"><rect x="16" y="18" width="48" height="44" rx="8"/><path d="M28 32h24M28 43h24M28 54h14"/></svg></div><h3>Tùy chỉnh kế hoạch</h3><p>Đặt số hiệp, số lần tập và thời gian nghỉ.</p></article>
+          <article><span class="step-number">03</span><div class="step-art yellow"><svg viewBox="0 0 80 80"><path d="M20 42l12 12 28-30"/><circle cx="40" cy="40" r="28"/></svg></div><h3>Tập và theo dõi</h3><p>Đánh dấu từng bài khi hoàn thành buổi tập.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety-section shell" id="safety" aria-labelledby="safety-title">
+      <div class="safety-card">
+        <div class="safety-copy">
+          <span class="eyebrow light"><span></span> Luôn ưu tiên an toàn</span>
+          <h2 id="safety-title">Chất lượng động tác quan trọng hơn số lượng.</h2>
+          <p>Khởi động trước khi tập, chọn mức độ phù hợp và dừng lại nếu có cảm giác đau bất thường. Nếu bạn có chấn thương hoặc vấn đề sức khỏe, hãy hỏi người có chuyên môn trước khi tập.</p>
+          <a href="#exercise-library">Xem hướng dẫn kỹ thuật <span>→</span></a>
+        </div>
+        <div class="safety-list">
+          <div><span>01</span><p><strong>Khởi động 5–10 phút</strong>Chuẩn bị khớp và cơ cho vận động.</p></div>
+          <div><span>02</span><p><strong>Tăng dần độ khó</strong>Chỉ tăng khi kỹ thuật vẫn ổn định.</p></div>
+          <div><span>03</span><p><strong>Nghỉ ngơi đầy đủ</strong>Cho cơ thể thời gian hồi phục.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-main">
+      <div><a class="brand footer-brand" href="#top"><span class="brand-mark"><svg viewBox="0 0 36 36"><path d="M8 15v6m4-10v14m12-14v14m4-10v6M12 18h12"/></svg></span><span>Fit<span>Forge</span></span></a><p>Không cần hoàn hảo. Chỉ cần bắt đầu đúng cách.</p></div>
+      <div class="footer-links"><div><strong>Khám phá</strong><a href="#exercise-library">Thư viện bài tập</a><a href="#how-it-works">Cách sử dụng</a></div><div><strong>Hỗ trợ</strong><a href="#safety">Tập an toàn</a><button id="reset-data" type="button">Xóa dữ liệu đã lưu</button></div></div>
+    </div>
+    <div class="shell footer-bottom"><span>© <span id="current-year"></span> FitForge.</span><span>Được tạo để mọi người vận động tốt hơn 🌿</span></div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="workout-drawer" id="workout-drawer" aria-labelledby="drawer-title" aria-hidden="true">
+    <div class="drawer-header"><div><span class="tiny-label">Kế hoạch hôm nay</span><h2 id="drawer-title">Buổi tập của tôi</h2></div><button class="icon-button" id="close-builder" type="button" aria-label="Đóng"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <div class="workout-name-wrap"><label for="workout-name">Tên buổi tập</label><input id="workout-name" value="Buổi tập toàn thân" maxlength="40"></div>
+    <div class="drawer-summary"><div><strong id="summary-exercises">0</strong><span>Bài tập</span></div><div><strong id="summary-sets">0</strong><span>Tổng hiệp</span></div><div><strong id="summary-time">0'</strong><span>Ước tính</span></div></div>
+    <div class="workout-list" id="workout-list"></div>
+    <div class="drawer-empty" id="drawer-empty"><span><svg viewBox="0 0 48 48"><path d="M8 20v8m7-14v20m18-20v20m7-14v8M15 24h18"/></svg></span><h3>Buổi tập đang trống</h3><p>Chọn “Thêm vào buổi tập” ở một bài bất kỳ.</p><button class="button soft" id="browse-from-drawer" type="button">Khám phá bài tập</button></div>
+    <div class="drawer-footer"><button class="button secondary full" id="clear-workout" type="button">Xóa buổi tập</button><button class="button primary full" id="start-workout" type="button">Bắt đầu tập <span>→</span></button></div>
+  </aside>
+
+  <dialog class="modal exercise-modal" id="exercise-modal">
+    <button class="icon-button modal-close" data-close-modal type="button" aria-label="Đóng"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <div id="exercise-modal-content"></div>
+  </dialog>
+
+  <dialog class="modal custom-modal" id="custom-modal">
+    <button class="icon-button modal-close" data-close-custom type="button" aria-label="Đóng"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <div class="modal-heading"><span class="eyebrow"><span></span> Bài tập của bạn</span><h2>Thêm bài tập riêng</h2><p>Bài tập sẽ được lưu trên trình duyệt này.</p></div>
+    <form id="custom-exercise-form">
+      <label>Tên bài tập<input name="name" required maxlength="45" placeholder="Ví dụ: Đi bộ tại chỗ"></label>
+      <div class="form-row"><label>Nhóm cơ<select name="muscle" required><option>Toàn thân</option><option>Ngực</option><option>Lưng</option><option>Chân</option><option>Vai</option><option>Bụng</option></select></label><label>Mức độ<select name="level" required><option>Cơ bản</option><option>Trung bình</option><option>Nâng cao</option></select></label></div>
+      <label>Dụng cụ<input name="equipment" maxlength="45" placeholder="Không cần dụng cụ"></label>
+      <label>Ghi chú kỹ thuật<textarea name="note" rows="3" maxlength="240" placeholder="Mô tả ngắn cách thực hiện..."></textarea></label>
+      <button class="button primary full" type="submit">Lưu bài tập</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>✓</span><p>Đã thêm vào buổi tập</p></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
